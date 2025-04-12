@@ -3,12 +3,23 @@
  */
 package org.mario;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
 public class App {
     public String getGreeting() {
         return "Hello Walid!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        JFrame f = new JFrame();
+        JButton b = new JButton("Press me");
+
+        b.setBounds(130,100,100, 40);
+        f.add(b);
+        f.setSize(400, 500);
+        f.setLayout(null);
+        f.setTitle("Mario");
+        f.setVisible(true);
     }
 }
